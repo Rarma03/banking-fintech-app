@@ -68,13 +68,20 @@ export const formatDateTime = (dateString: Date) => {
 
 // Function to format an amount as a currency string
 export function formatAmount(amount: number): string {
-  const formatter = new Intl.NumberFormat("en-US", {
+  const formatter = new Intl.NumberFormat("en-IN", {
     style: "currency",
-    currency: "USD",
+    currency: "INR",
     minimumFractionDigits: 2,
   });
 
   return formatter.format(amount);
+  // const formatter = new Intl.NumberFormat("en-US", {
+  //   style: "currency",
+  //   currency: "USD",
+  //   minimumFractionDigits: 2,
+  // });
+
+  // return formatter.format(amount);
 }
 
 // Function to parse and stringify a value
